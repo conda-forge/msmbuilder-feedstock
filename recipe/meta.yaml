@@ -1,14 +1,14 @@
 {% set name = "msmbuilder" %}
-{% set version = "3.6.1" %}
-{% set sha256 = "69a5eb96bf3c0e5421d091a31d6cc4a4169f7e629e334d87870e89038db50adf" %}
+{% set version = "3.7.0" %}
+{% set sha256 = "4ed39c63a623957f2d5e5178d4b6cf76dbe3b214ae2f5f1dba59bf91eab81b9c" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  fn: {{ name }}-{{ version }}.zip
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
   sha256: {{ sha256 }}
 
 build:
