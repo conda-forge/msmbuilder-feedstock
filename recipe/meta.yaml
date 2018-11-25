@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1000
   entry_points:
     - msmb = msmbuilder.scripts.msmb:main
   skip: True  # [win and py<35]
