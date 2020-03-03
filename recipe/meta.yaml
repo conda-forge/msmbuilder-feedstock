@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1000
   entry_points:
     - msmb = msmbuilder.scripts.msmb:main
   skip: True  # [win and py<35]
@@ -20,16 +20,18 @@ build:
 
 requirements:
   build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
     - python
     - setuptools
-    - toolchain
     - cython
-    - numpy x.x
+    - numpy
     - mdtraj
   run:
     - python
     - setuptools
-    - numpy x.x
+    - {{ pin_compatible('numpy') }}
     - scipy
     - pandas
     - six
@@ -49,7 +51,7 @@ test:
     - msmb -h
 
 about:
-  home: http://msmbuilder.org 
+  home: http://msmbuilder.org
   license: LGPLv2.1+
   summary: 'Statistical models for Biomolecular Dynamics'
 
