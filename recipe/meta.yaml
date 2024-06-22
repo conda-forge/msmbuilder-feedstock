@@ -12,14 +12,14 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - msmb = msmbuilder.scripts.msmb:main
   skip: True  # [win and py<35]
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
-  build:
+  host:
     - python
     - setuptools
     - toolchain
@@ -51,6 +51,7 @@ test:
 about:
   home: http://msmbuilder.org 
   license: LGPLv2.1+
+  license_file: LICENSE
   summary: 'Statistical models for Biomolecular Dynamics'
 
   description: |
