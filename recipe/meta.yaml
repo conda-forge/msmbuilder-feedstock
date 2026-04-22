@@ -8,11 +8,11 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - msmb = msmbuilder.scripts.msmb:main
   skip: True  # [win and py<35]
@@ -51,6 +51,7 @@ test:
 about:
   home: http://msmbuilder.org 
   license: LGPLv2.1+
+  license_file: LICENSE
   summary: 'Statistical models for Biomolecular Dynamics'
 
   description: |
